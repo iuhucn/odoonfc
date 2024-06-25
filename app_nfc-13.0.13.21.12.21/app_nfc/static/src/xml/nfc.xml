@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="App.NFCRW">
+        <div class="btn-group nfc-container" role="group">
+            <span class="icon iconfont icon-nfc"/>
+            <button t-if="nfcw" type="button" class="nfc-write btn btn-sm btn-link"
+                    title="NFC Writer. Must put the nfc tag on the writer first."> Write</button>
+            <button t-if="nfcr" type="button" class="nfc-read btn btn-sm btn-link"
+                    title="NFC Reader. Just put the nfc tag on the reader."> Read</button>
+            <button type="button" class="nfc-abort btn btn-sm btn-link"
+                    title="NFC Operation Stop."> Abort</button>
+        </div>
+    </t>
+</templates>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--sku form， 增加 nfc操作-->
+        <record id="app_product_normal_form_view" model="ir.ui.view">
+            <field name="name">app.product.product.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='barcode']" position="attributes">
+                    <attribute name="options">{'nfcw':1, 'nfcr':1, 'nfcr_auto':1, 'nfcr_data':0}</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
